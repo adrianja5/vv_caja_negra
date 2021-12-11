@@ -51,12 +51,12 @@ public void pruebaVacia() {
 @Test	
 public void pruebaFueraDominio() {
 	//Fuera del Limite Inferior
-	SingleLinkedListImpl<Character> esperada6= new SingleLinkedListImpl<> ('4','A','B','L','Y','Z');
+	SingleLinkedListImpl<Character> esperada6= new SingleLinkedListImpl<> ('A','B','L','Y','Z');
     SingleLinkedListImpl<Character> obtenida6= lista;
     obtenida6.addFirst('4');
 	assertEquals(obtenida6,esperada6);
 	//Fuera del Limite Superior
-	SingleLinkedListImpl<Character> esperada7= new SingleLinkedListImpl<> ('m','A','B','L','Y','Z');
+	SingleLinkedListImpl<Character> esperada7= new SingleLinkedListImpl<> ('A','B','L','Y','Z');
 	SingleLinkedListImpl<Character> obtenida7= lista;
 	obtenida7.addFirst('m');
     assertEquals(obtenida7,esperada7);	
