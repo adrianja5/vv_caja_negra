@@ -68,13 +68,13 @@ public class Test_addAtPos {
 	@Test	
 	public void pruebaFueraDominio() {
 		//Fuera del Limite Inferior
-		SingleLinkedListImpl<Character> esperada8= new SingleLinkedListImpl<> ('A','B','L','4','Y','Z');
+		SingleLinkedListImpl<Character> esperada8= new SingleLinkedListImpl<> ('A','B','L','Y','Z');
 	    SingleLinkedListImpl<Character> obtenida8= lista;
 	    obtenida8.addAtPos('4',4);
 		assertEquals(obtenida8,esperada8);
 		
 		//Fuera del Limite Superior
-		SingleLinkedListImpl<Character> esperada9= new SingleLinkedListImpl<> ('A','B','L','m','Y','Z');
+		SingleLinkedListImpl<Character> esperada9= new SingleLinkedListImpl<> ('A','B','L','Y','Z');
 		SingleLinkedListImpl<Character> obtenida9= lista;
 		obtenida9.addAtPos('m',4);
 	    assertEquals(obtenida9,esperada9);	
