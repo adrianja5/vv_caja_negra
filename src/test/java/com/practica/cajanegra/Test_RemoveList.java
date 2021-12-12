@@ -19,6 +19,7 @@ public void Test_RemoveLista() throws EmptyCollectionException {
 	assertEquals('O', lista.removeLast());
 		
     }
+
 @Test
 public void listaVacia() {
 	assertThrows(com.cajanegra.EmptyCollectionException.class, () -> {
