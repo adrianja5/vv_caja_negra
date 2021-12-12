@@ -14,7 +14,7 @@ import com.cajanegra.*;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-public class Test_getAtPos {
+public class getAtPos_Test {
     private static SingleLinkedListImpl<Character> listaLlena;
     private static SingleLinkedListImpl<Character> listaVacia;
 
@@ -26,6 +26,7 @@ public class Test_getAtPos {
 
     @ParameterizedTest
     @CsvSource({
+            "-1",
             "0",
             "1",
             "2"
@@ -38,13 +39,11 @@ public class Test_getAtPos {
 
     }
 
-    @ParameterizedTest
-    @CsvSource({
-            "0",
-            "1",
-            "2"
-    })
+   @Test
     public void getAtPos_llena_test_malas(){
+        assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            listaLlena.getAtPos(-1);
+        });
         assertThrows(java.lang.IllegalArgumentException.class, () -> {
             listaLlena.getAtPos(0);
         });
