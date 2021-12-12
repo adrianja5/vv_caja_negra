@@ -42,8 +42,9 @@ public class Test_addAtPos {
 		assertIterableEquals(obtenida2,esperada2);
 		
 		//lista vacia parametro invalido
+		SingleLinkedListImpl<Character> esperada4 = vacia;
                 assertThrows(IllegalArgumentException.class, () -> {
-	        vacia.addAtPos('Y',-1);
+	        esperada4.addAtPos('Y',-1);
 	    });
 			
 		}
