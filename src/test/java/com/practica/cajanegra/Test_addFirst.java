@@ -35,9 +35,14 @@ public class Test_addFirst {
 public void pruebaVacia() {
 	//lista vacia
 	SingleLinkedListImpl<Character> esperada2= new SingleLinkedListImpl<> ('A');
-    SingleLinkedListImpl<Character> obtenida2= vacia;
-    obtenida2.addFirst('A');
-	assertEquals(obtenida2,esperada2);
+        SingleLinkedListImpl<Character> obtenida2= vacia;
+        obtenida2.addFirst('A');
+	assertIterableEquals(obtenida2,esperada2);
+	
+	//lista vacia parametro invalido
+        assertThrows(IllegalArgumentException.class, () -> {
+	vacia.addFirst('Y',-1);
+	});
 		
 	}
 	
