@@ -39,8 +39,6 @@ public class Test_addAtPos {
 	        SingleLinkedListImpl<Character> obtenida2= lista;
 	        obtenida2.addAtPos('A',40);
 		assertIterableEquals(obtenida2,esperada2);
-		
-	    });
 			
 		}
 	@Test	
@@ -55,7 +53,7 @@ public class Test_addAtPos {
 		SingleLinkedListImpl<Character> esperada4 = vacia;
                 assertThrows(java.lang.IllegalArgumentException.class, () -> {
 	        esperada4.addAtPos('Y',-1);
-	    });
+	        });
 			
 		}
 
