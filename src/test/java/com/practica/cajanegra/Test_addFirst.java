@@ -27,7 +27,7 @@ public class Test_addFirst {
 	})
 	void pruebaLista(Character elem) {
 		SingleLinkedListImpl<Character> obtenida1 = lista;
-		obtenida1.addAtFirst(elem);
+		obtenida1.addFirst(elem);
 		assertEquals(obtenida1.getAtPos(1), elem);
 	}
 	
