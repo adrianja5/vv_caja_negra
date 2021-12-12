@@ -10,9 +10,8 @@ import static org.junit.jupiter.api.Assertions.assertIterableEquals;
 
 import java.util.NoSuchElementException;
 
-public class Test_RemoveListConParam{
+public class Test_RemoveLastConParam{
 	private SingleLinkedListImpl<Character> lista = new SingleLinkedListImpl<> ('A','B','Z','C','Y','C','F');
-	private SingleLinkedListImpl<Character> listaSeg = new SingleLinkedListImpl<> ('A','B','Z','Y','F');
 	private SingleLinkedListImpl<Character> listaVacia = new SingleLinkedListImpl<> ();
 	
 
@@ -57,7 +56,7 @@ public void TestV5() throws EmptyCollectionException{
 @Test
 public void TestInV1(){
 	
-	assertThrows(EmptyCollectionException.class, ()->{lista.removeLast('@');});
+	assertThrows(NoSuchElementException.class, ()->{lista.removeLast('@');});
 	
    }
 
