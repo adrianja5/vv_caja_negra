@@ -20,7 +20,8 @@ public class Test_addFirst {
 	@ParameterizedTest
 	@CsvSource({
 			"'A'",	
-			"'B'",	
+			"'B'",
+		        "'L'",
 			"'Z'",	
 			"'Y'",	
 	
@@ -41,7 +42,7 @@ public void pruebaVacia() {
 	
 	//lista vacia parametro invalido
         assertThrows(IllegalArgumentException.class, () -> {
-	vacia.addFirst('Y',-1);
+	vacia.addFirst('m');
 	});
 		
 	}
