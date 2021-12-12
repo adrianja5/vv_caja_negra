@@ -8,7 +8,8 @@ import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.Assert.assertThrows;
-
+import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.*;
 
 
 public class Test_addLast {
@@ -38,7 +39,7 @@ public void pruebaVacia() {
 	SingleLinkedListImpl<Character> esperada2= new SingleLinkedListImpl<> ('A');
         SingleLinkedListImpl<Character> obtenida2= vacia;
         obtenida2.addLast('A');
-	assertIterableEquals(obtenida2,esperada2);
+	assertEquals(obtenida2,esperada2);
 	
 	//lista vacia parametro invalido
         assertThrows(IllegalArgumentException.class, () -> {
