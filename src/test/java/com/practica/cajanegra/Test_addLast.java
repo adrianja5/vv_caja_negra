@@ -21,6 +21,7 @@ public class Test_addLast {
 	@CsvSource({
 			"'A'",	
 			"'B'",	
+		        "'L'",
 			"'Z'",	
 			"'Y'",	
 	
@@ -41,7 +42,7 @@ public void pruebaVacia() {
 	
 	//lista vacia parametro invalido
         assertThrows(IllegalArgumentException.class, () -> {
-	vacia.addLast('Y',-1);
+	vacia.addLast('4');
 	});
 		
 	}
