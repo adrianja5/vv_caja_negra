@@ -39,7 +39,7 @@ public class Test_addAtPos {
 		SingleLinkedListImpl<Character> esperada2= new SingleLinkedListImpl<> ('A');
 	        SingleLinkedListImpl<Character> obtenida2= vacia;
 	        obtenida2.addAtPos('A',4);
-		assertEquals(obtenida2,esperada2);
+		assertIterableEquals(obtenida2,esperada2);
 		
 		//lista vacia parametro invalido
                 assertThrows(IllegalArgumentException.class, () -> {
