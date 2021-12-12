@@ -25,7 +25,6 @@ public class Test_addAtPos {
 			"'Z',	5",
 			"'Y',	4",
 			"'A',	3",
-			"'A',	40",
 	
 	})
 	void pruebaLista(Character elem, int p) {
@@ -33,7 +32,17 @@ public class Test_addAtPos {
 		obtenida1.addAtPos(elem, p);
 		assertEquals(obtenida1.getAtPos(p), elem);
 	}
-
+@Test	
+	public void pruebaPosicionFuera() {
+		//posicion fuera del size
+		SingleLinkedListImpl<Character> esperada2= new SingleLinkedListImpl<> ('A','B','L','Y','Z','A');
+	        SingleLinkedListImpl<Character> obtenida2= lista;
+	        obtenida2.addAtPos('A',40);
+		assertIterableEquals(obtenida2,esperada2);
+		
+	    });
+			
+		}
 	@Test	
 	public void pruebaVacia() {
 		//lista vacia
