@@ -1,4 +1,4 @@
-package com.practica.cajanegra;
+package com.practica.cajanegra.Pruebas_Borrado;
 
 import com.cajanegra.SingleLinkedListImpl;
 
