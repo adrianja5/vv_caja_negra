@@ -1,6 +1,7 @@
 package com.practica.cajanegra.Pruebas_Insercion;
 
 import com.cajanegra.SingleLinkedListImpl;
+import com.cajanegra.*;
 import java.lang.IllegalArgumentException;
 
 
@@ -43,7 +44,7 @@ public class Test_addAtPos {
 		
 		//lista vacia parametro invalido
 		SingleLinkedListImpl<Character> esperada4 = vacia;
-                assertThrows(IllegalArgumentException.class, () -> {
+                assertThrows(java.lang.IllegalArgumentException.class, () -> {
 	        esperada4.addAtPos('Y',-1);
 	    });
 			
@@ -63,7 +64,7 @@ public class Test_addAtPos {
 		})
 		void pruebaFueraDominio(Character elem, int p) {
 			SingleLinkedListImpl<Character> esperada = lista;
-			assertThrows(IllegalArgumentException.class, () -> esperada.addAtPos(elem, p));
+			assertThrows(java.lang.IllegalArgumentException.class, () -> esperada.addAtPos(elem, p));
 		}	
 			
 }
